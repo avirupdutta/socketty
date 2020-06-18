@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Socketty</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<a class="navbar-brand" href="/">Socketty</a>
+			</nav>
+		</header>
+		<main class="container mt-4 w-50">
+			<h1 class="display-4 text-center">Socketty</h1>
+			<form action="/room" method="POST">
+				<label for="username">Username</label>
+				<input
+					type="text"
+					name="username"
+					class="form-control"
+					required
+				/><br />
+				<label for="username">Password</label>
+				<input
+					type="password"
+					name="password"
+					class="form-control"
+					required
+				/>
+				<br />
+				<label for="username">Choose your room</label>
+				<select name="roomName" class="form-control" required>
+					<option value="">---</option>
+					<option value="python">Python</option>
+					<option value="javascript">JavaScript</option>
+					<option value="java">Java</option>
+					<option value="php">PHP</option>
+					<option value="go">Go</option>
+				</select>
+				<br />
+				<button type="submit" class="btn btn-primary btn-block btn-lg">
+					Join
+				</button>
+			</form>
+		</main>
+	</body>
+</html>

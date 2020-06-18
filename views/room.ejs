@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Socketty</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<a class="navbar-brand" href="/">Socketty</a>
+			</nav>
+		</header>
+		<main class="container mt-4">
+			<h1 class="display-4 text-center text-capitalize">
+				<span id="roomName"><%= roomName %></span>
+			</h1>
+			<br />
+			<div class="row mb-3">
+				<div class="col-6">
+					<p>
+						Username:
+						<strong id="username"><%= username %></strong>
+					</p>
+				</div>
+				<div class="col-6 text-right">
+					<a href="/" class="btn btn-danger"
+						>Leave
+						<span class="material-icons">
+							directions_walk
+						</span></a
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2 bg-primary text-white rounded pt-3">
+					<strong>Room Users</strong>
+					<hr />
+					<div id="roomUsers">
+						<!-- <p>Brad</p>
+					<p>John</p>
+					<p>David</p>
+					<p>Popeye</p -->
+					</div>
+				</div>
+				<div class="col-10">
+					<div
+						class="border mb-3 rounded bg-chatbox all-messages"
+						id="allMessages"
+						style="height: 25rem; overflow-y: scroll;"
+					></div>
+					<form action="#" class="w-100 mb-5">
+						<div class="input-group">
+							<input
+								required
+								type="text"
+								class="form-control"
+								placeholder="Type your message..."
+								id="message"
+							/>
+							<div class="input-group-append">
+								<button
+									class="btn btn-primary"
+									type="submit"
+									id="sendBtn"
+								>
+									Send
+									<span class="material-icons">
+										send
+									</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
